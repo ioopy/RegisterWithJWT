@@ -3,11 +3,6 @@
 ## Get Information. 
     This is registration service with Java restful API (Spring boot)
 
-```
-http://localhost:8082/
-
-```
-
 ## Steps to Setup
 
 **1. Clone the application**
