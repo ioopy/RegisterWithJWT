@@ -1,0 +1,15 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ep-tight-morning-332312.ap-southeast-1.aws.neon.tech/neondb
+    username: pae.saythong
+    password: zOdgvc9np5eV
+  jpa:
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+    show-sql: true
+
+      

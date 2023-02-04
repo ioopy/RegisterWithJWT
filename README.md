@@ -1,11 +1,10 @@
 # RegisterWithJWT
 
-## Get information about system health. 
+## Get Information. 
+    This is registration service with Java restful API (Spring boot)
 
 ```
-
 http://localhost:8082/
-
 
 ```
 
@@ -14,7 +13,7 @@ http://localhost:8082/
 **1. Clone the application**
 
 ```bash
-git clone https://github.com/monirozzaman/Salary-Maker-Backend.git
+git clone https://github.com/ioopy/RegisterWithJWT.git
 ```
 
 **2. Build and run the app using maven**
@@ -39,3 +38,36 @@ The app defines following CRUD APIs.
     GET /api/auth/user/detail
 
 You can test them using postman or any other rest client.
+
+### Example Body Request
+```
+    POST /api/auth/register
+    Content-Type: application/json
+
+    {
+        "username" : "username",
+        "password": "password",
+        "salary": "50000",
+        "address": "address",
+        "phone": "0971762856"
+    }
+    Response: HTTP 200
+    Content: User Detail 
+
+    POST /api/auth/login
+    Content-Type: application/json
+
+    {
+        "username" : "username",
+        "password": "password",
+    }
+    Response: HTTP 200
+    Content: Token
+
+    GET /api/auth/user/detail
+    Content-Type: application/json
+    Authorization: Bearer TOKEN
+
+    Response: HTTP 200
+    Content: User Detail
+```
