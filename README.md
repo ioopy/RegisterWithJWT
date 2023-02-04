@@ -34,7 +34,7 @@ The app defines following CRUD APIs.
 
 You can test them using postman or any other rest client.
 
-### Sample Valid JSON Request Bodys
+### Sample Valid JSON Request Body
 
 ##### <a id="register">Register -> /api/auth/register</a>
 ```
@@ -65,7 +65,7 @@ $ curl -X POST 'http://localhost:8082/api/auth/login'
 $ curl -X GET http://localhost:8082/api/auth/user/detail -H 'Authorization: Bearer <JWT_TOKEN>'
 ```
 
-### Example Test
+### Test
 ```bash
 mvn test
 ```
