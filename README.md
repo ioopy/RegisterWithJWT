@@ -53,7 +53,8 @@ You can test them using postman or any other rest client.
     }
     Response: HTTP 200
     Content: User Detail 
-
+```
+```
     POST /api/auth/login
     Content-Type: application/json
 
@@ -63,7 +64,8 @@ You can test them using postman or any other rest client.
     }
     Response: HTTP 200
     Content: Token
-
+```
+```
     GET /api/auth/user/detail
     Content-Type: application/json
     Authorization: Bearer TOKEN
