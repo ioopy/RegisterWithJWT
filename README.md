@@ -26,45 +26,46 @@ The app will start running at <http://localhost:8082>.
 
 The app defines following CRUD APIs.
 
-    POST /api/auth/register
-    
-    POST /api/auth/login
-    
-    GET /api/auth/user/detail
+| Method | Url | Decription | Sample Valid Request Body | 
+| ------ | --- | ---------- | --------------------------- |
+| POST   | /api/auth/register | Register | [JSON](#register) |
+| POST   | /api/auth/login | Log in, Get token | [JSON](#login) |
+| GET   | /api/auth/user/detail | User Detail | |
 
 You can test them using postman or any other rest client.
 
-### Example Body Request
-```
-    POST /api/auth/register
-    Content-Type: application/json
+### Sample Valid JSON Request Bodys
 
-    {
-        "username" : "username",
-        "password": "password",
-        "salary": "50000",
-        "address": "address",
-        "phone": "0971762856"
-    }
-    Response: HTTP 200
-    Content: User Detail 
+##### <a id="register">Register -> /api/auth/register</a>
 ```
+$ curl -X POST 'http://localhost:8082/api/auth/register'
 ```
-    POST /api/auth/login
-    Content-Type: application/json
+```json
+{
+    "username" : "username",
+    "password": "password",
+    "salary": "50000",
+    "address": "address",
+    "phone": "0971762856"
+}
+```
 
-    {
-        "username" : "username",
-        "password": "password",
-    }
-    Response: HTTP 200
-    Content: Token
+##### <a id="login">Log in -> /api/auth/login</a>
 ```
+$ curl -X POST 'http://localhost:8082/api/auth/login'
 ```
-    GET /api/auth/user/detail
-    Content-Type: application/json
-    Authorization: Bearer TOKEN
+```json
+{
+    "username" : "username",
+    "password": "password",
+}
+```
+##### <a id="detail">User Detail -> /api/auth/user/detail</a>
+```
+$ curl -X GET http://localhost:8082/api/auth/user/detail -H 'Authorization: Bearer <JWT_TOKEN>'
+```
 
-    Response: HTTP 200
-    Content: User Detail
+### Example Test
+```bash
+mvn test
 ```
